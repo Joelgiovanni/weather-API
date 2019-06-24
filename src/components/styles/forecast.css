@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400&display=swap');
+
+.forecast-overlay {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.forecast-header {
+  border-bottom: 1px solid black;
+  letter-spacing: 12px;
+  color: black;
+  font-weight: 100;
+  padding: 20px;
+  font-size: 45px;
+}
+
+.secondary-header {
+  letter-spacing: 6px;
+  color: black;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.arrow {
+  margin-top: 30%;
+  font-size: 80px;
+  color: green;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 100;
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  border: 1px solid red;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+.reset {
+  top: 5%;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* layout design for small and medium screens */
+@media only screen and (max-width: 768px) {
+  .forecast-list {
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    font-weight: 200;
+    width: 80%;
+    padding: 20px;
+    margin-top: 20px;
+    line-height: 35px;
+    background-color: rgba(135, 206, 235, 0.2);
+    border-radius: 10px;
+  }
+
+  .result {
+    color: blue;
+    margin-left: 5px;
+  }
+
+  .weather-icon {
+    font-size: 60px;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 100%;
+  }
+}
+
+/* layout design for large screens */
+
+@media only screen and (min-width: 768px) {
+  .row {
+    justify-content: center;
+  }
+
+  .forecast-list {
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    font-weight: 200;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    line-height: 35px;
+    background-color: rgba(135, 206, 235, 0.2);
+    border-radius: 10px;
+  }
+}

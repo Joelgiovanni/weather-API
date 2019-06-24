@@ -1,0 +1,48 @@
+.homepage-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  border-bottom: 1px solid black;
+  letter-spacing: 12px;
+  color: black;
+  font-weight: 100;
+  padding: 20px;
+  font-size: 45px;
+}
+
+.secondary-header {
+  letter-spacing: 6px;
+  color: black;
+  font-weight: 200;
+}
+
+.my-input {
+  color: black;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.my-button {
+  padding: 8px;
+  color: white;
+  border-radius: 100%;
+  background-color: blue;
+  border: 1px solid white;
+  font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 568px) {
+  .my-input {
+    margin-left: -20px;
+  }
+
+  .my-button:hover {
+    background-color: red;
+  }
+}
