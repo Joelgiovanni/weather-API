@@ -22,10 +22,11 @@ class HomePage extends Component {
     e.preventDefault();
     const providedZip = this.state.zip;
     const apiKey = require('../../config/Keys').APIKEY;
+
     //Make initial API CALL
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/forecast?zip=${providedZip}&APPID=${apiKey}&units=imperial`
+        `https://api.openweathermap.org/data/2.5/forecast?zip=${providedZip}&APPID=${apiKey}&units=imperial`
       )
       .then(res => {
         var data = res.data;
