@@ -3,7 +3,7 @@
 .forecast-overlay {
   font-family: 'Raleway', sans-serif;
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -11,46 +11,63 @@
 }
 
 .forecast-header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fdb353;
   letter-spacing: 12px;
-  color: black;
+  color: white;
   font-weight: 100;
   padding: 20px;
+  text-transform: uppercase;
   font-size: 45px;
 }
 
-.secondary-header {
-  letter-spacing: 6px;
-  color: black;
+.large-temp {
+  color: white;
+  font-size: 70px;
+  font-style: initial;
   font-weight: 100;
-  font-size: 20px;
+  letter-spacing: 1px;
 }
 
-.arrow {
-  margin-top: 30%;
-  font-size: 80px;
-  color: green;
+.large-desc {
+  font-size: 40px;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
 .button {
-  font-size: 16px;
-  font-weight: 100;
+  border-bottom: 2px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+
   background-color: transparent;
-  border: none;
-  width: 200px;
-  border: 1px solid red;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  color: #fdb353;
+  padding: 10px;
+  letter-spacing: 6px;
+  font-size: 18px;
 }
 
 .button:hover {
-  background-color: rgba(255, 0, 0, 0.2);
+  font-size: 19px;
+  -webkit-transition: font-size 900ms linear;
+  -ms-transition: font-size 900ms linear;
+  transition: font-size 900ms linear;
+
   color: white;
-  cursor: pointer;
+  -webkit-transition: color 400ms linear;
+  -ms-transition: color 400ms linear;
+  transition: color 400ms linear;
+
+  border-bottom: 2px solid #fdb353;
+  -webkit-transition: color 600ms linear;
+  -ms-transition: color 600ms linear;
+  transition: color 600ms linear;
 }
 
 .reset {
-  top: 5%;
+  top: 15%;
   font-family: 'Raleway', sans-serif;
   position: absolute;
   left: 50%;
@@ -58,50 +75,127 @@
   transform: translate(-50%, -50%);
 }
 
-/* layout design for small and medium screens */
-@media only screen and (max-width: 768px) {
-  .forecast-list {
-    font-family: 'Raleway', sans-serif;
-    list-style: none;
-    font-weight: 200;
-    width: 80%;
-    padding: 20px;
-    margin-top: 20px;
-    line-height: 35px;
-    background-color: rgba(135, 206, 235, 0.2);
-    border-radius: 10px;
-  }
+.five-day {
+  top: 75%;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
 
-  .result {
-    color: blue;
-    margin-left: 5px;
-  }
+.cards-container {
+  background-image: url('../../images/lake.jpg');
+  background-size: cover;
+  height: auto;
+  z-index: 999;
+}
 
+.down-icon {
+  font-size: 40px;
+  margin-left: 14px;
+}
+
+.col {
+  margin-top: 3%;
+}
+
+.card {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: -8px;
+}
+
+.card-title {
+  color: whitesmoke;
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+.card-header {
+  padding: 0;
+  border-bottom: 1px solid white;
+}
+
+.card-body {
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.weather-icon {
+  color: white;
+  font-size: 100px;
+}
+
+.left {
+  position: absolute;
+}
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.top-temp {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.card-temp {
+  color: white;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.card-description {
+  margin-top: -20px;
+  color: white;
+  letter-spacing: 6px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 986px) {
   .weather-icon {
-    font-size: 60px;
-    color: black;
-    background-color: white;
-    padding: 8px;
-    border-radius: 100%;
+    margin-top: 20px;
+    font-size: 80px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 548px) {
+  .reset {
+    top: 10%;
+  }
+}
+
+/* layout design for small and medium screens */
+@media only screen and (max-width: 500px) {
+  .five-day p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .down-icon {
+    font-size: 30px;
+    margin-left: 5px;
   }
 }
 
 /* layout design for large screens */
 
-@media only screen and (min-width: 768px) {
-  .row {
-    justify-content: center;
+@media only screen and (max-width: 425px) {
+  .top-temp {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
-
-  .forecast-list {
-    font-family: 'Raleway', sans-serif;
-    list-style: none;
-    font-weight: 200;
-    width: 100%;
-    padding: 20px;
-    margin-top: 20px;
-    line-height: 35px;
-    background-color: rgba(135, 206, 235, 0.2);
-    border-radius: 10px;
+  .card {
+    margin-top: 10px;
   }
 }

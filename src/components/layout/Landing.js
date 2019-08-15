@@ -1,4 +1,4 @@
-import background from '../../images/warm.jpg';
+import background from '../../images/contrast.jpg';
 import '../styles/landing.css';
 
 import React, { Component } from 'react';

@@ -1,5 +1,5 @@
 .container-fluid-footer {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: black;
   padding: 14px;
   opacity: 40%;
   font-size: 20px;
@@ -9,15 +9,18 @@
   margin-top: 0;
 }
 
+.footer-content {
+  color: white;
+}
 .copyright {
-  color: blue;
+  color: #fdb353;
   font-weight: 100;
 }
 
 .icon {
   margin-left: 6px;
   font-size: 25px;
-  color: green;
+  color: #fff;
 }
 
 a:hover {

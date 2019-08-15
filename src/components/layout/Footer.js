@@ -7,13 +7,19 @@ class Footer extends Component {
       <div className='container-fluid container-fluid-footer'>
         <div className='footer'>
           <div className='footer-content'>
-            <span className='copyright'> &#169; </span>
-            Joel Godoy {new Date().getFullYear()}
+            Joel Godoy{' '}
+            <span className='copyright'>
+              {' '}
+              &#169; {new Date().getFullYear()}{' '}
+            </span>
             <a
               className='fab fa-github icon'
               href='https://github.com/Joelgiovanni'
+              rel='noopener noreferrer'
               target='_blank'
-            />
+            >
+              {' '}
+            </a>
           </div>
         </div>
       </div>

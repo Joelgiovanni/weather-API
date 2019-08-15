@@ -41,6 +41,7 @@ class HomePage extends Component {
             expectedTemp: data.list[i].main.temp,
             minTemp: data.list[i].main.temp_min,
             maxTemp: data.list[i].main.temp_max,
+            wind: data.list[i].wind.speed,
             description: data.list[i].weather[0].main,
             icon: data.list[i].weather[0].icon,
             id: data.list[i].weather[0].id
@@ -66,14 +67,14 @@ class HomePage extends Component {
     return (
       <div className='homepage-overlay'>
         <div>
-          <h1 className='header'>Local Weather</h1>
+          <h1 className='header'>5 DAY FORECAST</h1>
           {this.state.error ? (
             <p className='text-danger'>{this.state.error}</p>
           ) : (
             ''
           )}
           <p className='secondary-header mt-3'>
-            Please enter the 5 digit zip code of your city
+            <span className='zip'> Please enter 5 digit Zip Code </span>
           </p>
           <br />
           <form
@@ -85,17 +86,19 @@ class HomePage extends Component {
                 type='text'
                 name='zip'
                 pattern='\d*'
-                className='form-control-plaintext my-input'
-                placeholder='5 Digit Zip Code Here'
+                className='form-control-plaintext my-input text-center'
+                placeholder='Zip Code Here'
                 maxLength='5'
                 onChange={this.onChange}
                 value={this.state.zip}
               />
             </div>
-            <button type='submit' className='btn mb-2 my-button'>
-              GO!
-            </button>
           </form>
+          <div className='submit ml-4 mt-4'>
+            <button onClick={this.onSubmit} className='btn ml-2 my-button'>
+              SEARCH <i className='fas fa-search-location search-icon' />
+            </button>
+          </div>
         </div>
       </div>
     );
